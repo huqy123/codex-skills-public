@@ -1,6 +1,6 @@
 ---
 name: issue-code-trace
-description: Use when a code or page issue needs evidence about reachability, cause, introduction time, current branch, or deployment status without defaulting to a fix.
+description: 当一个代码或页面问题需要核实触发路径、原因、提交时间与作者、本地和远程差异或部署状态时使用。只调查指定问题，不默认修复或展开全项目审查。
 ---
 
 # 问题代码溯源
@@ -9,7 +9,7 @@ description: Use when a code or page issue needs evidence about reachability, ca
 
 - 只调查用户点名的问题，不把整份历史问题清单重新查一遍。
 - 用户只问原因时保持只读，不切分支、不拉取、不提交、不推送、不改数据。
-- 先确认当前工作区、分支、HEAD、未提交改动和本地远程记录。
+- 先确认当前工作区、Git根目录、分支、HEAD、未提交改动和本地记录的远程引用。
 - 只读相关文件和必要历史，不输出凭据、个人明细或带密钥的地址。
 
 ## 核对路径
@@ -18,6 +18,17 @@ description: Use when a code or page issue needs evidence about reachability, ca
 2. 沿“用户操作 → 输入 → 判断 → 保存或副作用 → 页面结果”说明一个具体例子，并区分静态核对、模拟、真实页面和接口验证。
 3. 用 `git diff`、`git blame`、`git log -S/-G`、`git show` 核对首次引入、后续修复、再次引入和单纯移动代码。不能只把最后修改该行的人当成引入者。
 4. 分开说明工作区未提交、当前提交、本地记录的远程版本、真正远程和部署状态。推送不等于已部署。
+
+## 容易判断错的地方
+
+- 检查入口是否仍可见，是否受权限、开关或后端校验限制。历史回显或已停用的残留路径，不直接报告成正常业务已复现。
+- 方法模拟成立但未核实页面路径时，明确写“方法模拟成立，真实页面尚未确认”。
+- `git blame` 只提供线索。查看提交前后代码，区分首次引入、后来修复、保护被移除、合并带回和单纯移动代码。
+- 合并提交按需查看相关父提交。Git作者和提交者不同则分别说明，时间带时区；账号不能证明实际操作者或动机。
+- `origin/<branch>` 是本地缓存，未刷新时不能称为最新远程。需要时只读核实远程提交；内容对象不在本地则说明尚未读取，不擅自拉取或切分支。
+- 某提交在当前分支的历史中，不代表对应行为还存在；后续代码可能已撤销或修复。
+
+按需使用精确文件范围的 `git diff`、`git log -S/-G`、`git show` 和父版本比较，不要求每个命令都执行。
 
 ## 输出
 

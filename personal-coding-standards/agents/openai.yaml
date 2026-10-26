@@ -1,0 +1,4 @@
+interface:
+  display_name: "个人编码规范"
+  short_description: "按现有项目约定做最小完整修改，检查分层、批量访问、精度和契约兼容"
+  default_prompt: "请使用 $personal-coding-standards 完成本次代码任务，并说明改动范围及针对性验证。"

@@ -1,0 +1,6 @@
+interface:
+  display_name: "人话说明"
+  short_description: "用自然中文写回复、注释和操作文档，讲清原因、影响和下一步"
+  default_prompt: "使用 $plain-chinese，把这件事用自然、准确的中文讲清楚。"
+policy:
+  allow_implicit_invocation: true

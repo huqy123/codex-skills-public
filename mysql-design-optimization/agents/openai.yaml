@@ -1,0 +1,4 @@
+interface:
+  display_name: "MySQL 设计与优化"
+  short_description: "按真实版本、结构和执行计划审查 SQL、索引、统计口径及多环境变更"
+  default_prompt: "请使用 $mysql-design-optimization 检查当前数据库任务，先核实证据，再给最小可用 SQL 和验证方式。"

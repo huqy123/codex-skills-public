@@ -1,0 +1,6 @@
+interface:
+  display_name: "问题代码溯源"
+  short_description: "核实指定问题的真实触发路径、原因、提交历史及本地与远程状态"
+  default_prompt: "使用 $issue-code-trace 调查指定问题的原因和提交历史，先不要修改。"
+policy:
+  allow_implicit_invocation: true

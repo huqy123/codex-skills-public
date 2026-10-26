@@ -1,0 +1,6 @@
+interface:
+  display_name: "会话整理（手动）"
+  short_description: "手动保留关键要求和未完成工作，区分交接摘要与原生压缩完成情况"
+  default_prompt: "使用 $session-brief 整理当前会话，保留关键要求、证据和未完成事项。"
+policy:
+  allow_implicit_invocation: false

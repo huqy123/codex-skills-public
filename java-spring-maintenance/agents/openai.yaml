@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java / Spring 维护"
+  short_description: "沿真实调用链检查保存、重开、批量处理、事务及 JVM 故障证据"
+  default_prompt: "请使用 $java-spring-maintenance 调查当前后端问题，说明数据链路、已核实原因和验证边界。"

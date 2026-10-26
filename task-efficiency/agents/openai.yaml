@@ -1,0 +1,6 @@
+interface:
+  display_name: "任务提速"
+  short_description: "按实际风险选择调查、实现和验证范围，减少重复读取与流程叠加"
+  default_prompt: "使用 $task-efficiency，按本次任务风险完成必要工作和验证。"
+policy:
+  allow_implicit_invocation: true

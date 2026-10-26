@@ -1,0 +1,4 @@
+interface:
+  display_name: "邮件日志阅读与分析"
+  short_description: "读取指定日志邮件并归并异常，核对来源完整性，按授权保护邮件状态"
+  default_prompt: "使用 $mail-log-analysis 分析我指定范围的系统日志邮件，保留邮件原有状态。"

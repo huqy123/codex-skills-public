@@ -14,6 +14,7 @@
 | [personal-coding-standards](personal-coding-standards/SKILL.md) | 最小完整修改、分层、批量数据访问、精度、事务和契约兼容。 |
 | [java-spring-maintenance](java-spring-maintenance/SKILL.md) | Java/Spring字段链路、并发资源、批量处理和JVM故障排查。 |
 | [mysql-design-optimization](mysql-design-optimization/SKILL.md) | 按真实结构和执行计划设计表、优化查询并核对结构变更风险。 |
+| [mail-log-analysis](mail-log-analysis/SKILL.md) | 读取指定系统日志邮件、归并异常并按授权保护邮件状态。 |
 
 ## 使用方式
 
@@ -29,4 +30,4 @@
 
 只保留跨项目可复用的方法，不包含公司项目代码、内部业务规则、真实订单和客户资料、数据库快照或连接配置、私有接口、凭据及个人绝对路径。
 
-内部测试库、业务推进和邮箱技能，以及工作流框架安装包和原始会话记忆，不在本仓库发布范围内。MySQL参考资料是通用检查方法，不是可直接执行的生产变更脚本。
+内部测试库和业务推进技能、具体邮箱配置和专用过滤规则，以及工作流框架安装包和原始会话记忆，不在本仓库发布范围内。MySQL参考资料是通用检查方法，不是可直接执行的生产变更脚本；邮件技能不内置账号、收信程序或定时任务。
